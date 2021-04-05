@@ -7,6 +7,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>bba-app</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <sonar.projectKey>bbapplication_bba-app</sonar.projectKey>
+    <sonar.organization>bbapplication</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
