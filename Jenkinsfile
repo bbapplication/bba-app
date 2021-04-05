@@ -9,7 +9,7 @@ pipeline {
                
                git branch: 'main', url: 'https://github.com/bbapplication/bba-app.git'
 
-             
+                sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar"
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
               
