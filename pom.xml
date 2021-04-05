@@ -11,6 +11,8 @@
     <sonar.projectKey>bbapplication_bba-app</sonar.projectKey>
     <sonar.organization>bbapplication</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
   <dependencies>
     <dependency>
