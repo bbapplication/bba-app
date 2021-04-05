@@ -9,7 +9,7 @@ pipeline {
                
                git branch: 'main', url: 'https://github.com/bbapplication/bba-app.git'
 
-                sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar"
+               // sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar"
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
               
@@ -19,6 +19,7 @@ pipeline {
                 success {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
+                    sh "aws s3 cp target/bbapp.jar s3://myjenkinsdemo/bba-app/main/"
                 }
             }
         }
